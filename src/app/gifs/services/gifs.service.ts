@@ -15,7 +15,8 @@ export class GifsService {
   constructor(
     private htpp:HttpClient
   ) {
-    this.gifHistory = JSON.parse( localStorage.getItem('gifs') || '' )
+    const gifs = (localStorage.getItem('gifs')) ? JSON.parse(localStorage.getItem('gifs') || '') : []
+    this.gifHistory = gifs;
   }
 
   allHistoyGifs():string[]{
