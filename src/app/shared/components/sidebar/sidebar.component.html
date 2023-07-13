@@ -1,0 +1,23 @@
+<div class="bg-dark border-rigth p-3 d-flex flex-column justify-content-between" id="sidebar">
+  <div>
+    <h2 class="text-light">GifsApp</h2>
+    <hr class="text-light">
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let gif of allHistoyGifs"
+        (click)="searchGifHistoryByName(gif)"
+      >
+      {{ gif | titlecase}}</li>
+    </ul>
+  </div>
+  <div>
+    <hr class="text-light">
+    <div class="d-flex flex-wrap">
+      <img src="../../../../assets/FB_IMG_1689048994480.jpg" alt="" width="50" height="50" style="border-radius: 30px;">
+      <b class="text-light m-3">Jhonny Muñoz</b>
+    </div>
+
+  </div>
+
+</div>

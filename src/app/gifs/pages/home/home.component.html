@@ -1,0 +1,15 @@
+<div id="main">
+  <app-search-box></app-search-box>
+  <hr>
+  <div>
+    <ul class="card-list-box">
+      <li *ngFor="let gif of gifs">
+        <app-card [gif]="gif"></app-card>
+      </li>
+    </ul>
+    <div *ngIf="flag" class="alert alert-warning " role="alert">
+      Sin resultados
+    </div>
+  </div>
+
+</div>
